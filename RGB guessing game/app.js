@@ -13,6 +13,7 @@ var j=document.getElementById("r");
 var k=document.getElementsByClassName("container2");
 var l=document.getElementById("res");
 picked=Math.floor(Math.random()*6);
+//validation logic
 a.addEventListener("click",function(){
 if(colors[picked]==colors[0]){
 	l.textContent="correct!!!"
@@ -102,6 +103,7 @@ k[0].style.backgroundColor=colors[picked];
 	f.style.background="#232323";
 }
 }); 
+//refresh logic & restart logic
 g.addEventListener("click",function(){
  alert("refresh");
 });
@@ -137,14 +139,14 @@ i.style.color="black";
 });
 
 
-
+//random color generator logic
 function random(){
     var r = Math.floor(Math.random() * 255);
     var g= Math.floor(Math.random() * 255);
     var b = Math.floor(Math.random() * 255);
     return "RGB("+r+","+g+","+b+")";
 }
-
+//applying the random color to the squares logic
 function putcolor(){
 	a.style.background=colors[0];
 	b.style.background=colors[1];
